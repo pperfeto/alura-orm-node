@@ -24,6 +24,10 @@ module.exports = (sequelize, DataTypes) => {
     defaultScope: {
       where: { ativo: true }
     },
+    scopes: {
+      todos: { where: {} },
+      //etc: { constraint: valor }
+    },
     modelName: 'Pessoas',
   });
   return Pessoas;
